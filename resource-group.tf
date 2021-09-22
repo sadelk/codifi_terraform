@@ -1,8 +1,6 @@
 resource "azurerm_resource_group" "sadelk-grp" {
-  name     = "sadelk-group"
-  location = "West Europe"
+  name     = var.resourceGroupName
+  location = var.location
 
-  tags = {
-      "env" = "production"
-  }
+  tags = var.tags
 }
